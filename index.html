@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>ANIMECA</title>
+</head>
+<body>
+    <header  class="main-header">
+
+        <div class="header-top">
+            <div class="left-icons">
+                <button class="icon-btn" id="menu-toggle">
+                    <img src="assets/menu.svg" alt="Menu">
+                </button>
+            </div>
+
+            <div class="search-container">
+                <div class="right-icons">
+                <button class="icon-btn" id="search-btn">
+                    <img src="assets/search.svg" alt="Buscar"/>
+                </button>
+                <input type="text" id="search-input" placeholder="Buscar animes, mangas, películas...">
+            </div>
+            
+                <button class="icon-btn" id="user">
+                    <img src="assets/user.svg" alt="User">
+                </button>
+            </div>  
+
+        </div>
+        
+
+    <nav class="navbar">
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#">ANIMES</a></li>
+            <li><a href="#">MANGAS</a></li>
+            <li><a href="#">PELÍCULAS</a></li>
+            <li><a href="#">NOTICIAS</a></li>
+            <li><a href="#">TOP CALIFICADOS</a></li>
+            <li><a href="#">FORO</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-slider">
+        <div class="slides">
+            <img src="assets/ao ashi.jpeg" alt="" class="slide active">
+            <img src="assets/apothecary.jpg" alt="" class="slide">
+            <img src="assets/fire force.jpg" alt="" class="slide">
+            <p id="slider-caption">AO ASHI</p>
+        </div>
+    </div>
+    </header>
+
+    <section class="container-top">
+        <h2>TOP ANIMES CON MÁS RATING DE LA SEMANA</h2>
+
+        <div class="carousel-wrapper" id="anime-container">
+            <button class="scroll-btn left scroll-left">&#9664;</button>
+
+            <div class="carrousel-track">
+                    <div class="anime-card" data-id="onepiece">
+                        <a href="anime.html?id=onepiece">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="assets/Arco_de_Egghead.jpg" alt="one piece">
+                                <p>ONE PIECE</p>
+                            </div>
+                            <div class="card-back">
+                                <p>Género:Shonen, acción, aventura</p>
+                                <p>Rating: ★★★★★</p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                    
+
+                    <div class="anime-card" data-id="gachiakuta">
+                        <a href="anime.html?id=gachiakuta">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/Gachiakuta.jpg" alt="gachiakuta">
+                            <p>GACHIAKUTA</p>
+                        </div>
+                        <div class="card-back">
+                            <p>Género:Shonen, acción, ciencia ficción</p>
+                            <p>Rating: ★★★★★</p>
+                        </div>
+                    </div>
+                        </a>
+                </div>
+
+                <div class="anime-card" data-id="overlord">
+                    <a href="anime.html?id=overlord">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/overlord.jpg" alt="">
+                            <p>OVERLORD</p>
+                        </div>
+                        <div class="card-back">
+                            <p>Género:Shonen, acción, aventura, isekai</p>
+                            <p>Rating: ★★★★</p>
+                        </div>
+                    </div>
+                        </a>
+                </div>
+
+                <div class="anime-card" data-id="kimetsu">
+                    <a href="anime.html?id=kimetsu">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/kimetsu.avif" alt="">
+                            <p>KIMETSU NO YAIBA</p>
+                        </div>
+                        <div class="card-back">
+                            <p>Género:Shonen, acción, aventura</p>
+                            <p>Rating: ★★★★★</p>
+                        </div>
+                    </div>
+                        </a>
+                </div>
+
+                <div class="anime-card" data-id = "haikyuu">
+                    <a href="anime.html?id=haikyuu">
+                    <div class="card-inner">
+                        <div class="card-front">
+                                <img src="assets/haikyuu.jpg" alt="">
+                                <p>HAIKYUU!!!</p>
+                        </div>
+                        <div class="card-back">
+                            <p>Género:Shonen, spokon, colegial</p>
+                            <p>Rating: ★★★★★</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="anime-card" data-id="shingeki">
+                    <a href="anime.html?id=shingeki">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/shingeki.jpg" alt="">
+                            <p>Shingeki no Kyojin</p>
+                        </div>
+                        <div class="card-back">
+                            <p>Género:Shonen, acción, gore, aventura, suspenso, misterio</p>
+                            <p>Rating: ★★★★</p>
+                        </div>
+                    </div>
+                        </a>
+                </div>
+                
+            </div>
+
+            
+            <button class="scroll-btn right scroll-right">&#9654;</button>
+        </div>
+        
+
+    </section>
+
+
+    <section class="container-top">
+        <h2>ANIMES RECOMENDADOS POR LA COMUNIDAD</h2>
+
+        <div class="carousel-wrapper" id="anime-container2">
+            <button class="scroll-btn left scroll-left">&#9664;</button>
+
+            <div class="carrousel-track">
+                <a href="anime.html?id=monster">
+                <div class="anime-card" data-id="monster">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/monster.jpg" alt="">
+                            <p>Monster</p>
+                        </div>
+                        <div class="card-back">
+                            <p>Género:Seinen, acción, terror, drama, suspenso</p>
+                            <p>Rating: ★★★★★</p>
+                        </div>
+                    </div>
+                        </a>
+                </div>
+
+                
+
+                <div class="anime-card" data-id="solo leveling">
+                    <a href="anime.html?id=sololeveling">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/solo leveling.jpg"">
+                            <p>Solo Leveling</p>
+                        </div>
+                        <div class="card-back">
+                            <p>Género:Shonen, acción, ciencia ficción</p>
+                            <p>Rating: ★★★★★</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                
+                <div class="anime-card" data-id="slime">
+                    <a href="anime.html?id=slime">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/slime.jpg" alt="slime">
+                            <p>That Time I Got Reincarnated as a Slime</p>
+                        </div>
+                        <div class="card-back">
+                            <p>Género:Isekai, acción, aventura</p>
+                            <p>Rating: ★★★★★</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="anime-card" data-id="chainsaw">
+                    <a href="anime.html?id=chainsaw">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/chainsaw.jpg" alt="">
+                            <p>Chainsaw Man</p>
+                        </div>
+                        <div class="card-back">
+                            <p>Género:Shonen, acción, aventura, demonios</p>
+                            <p>Rating: ★★★★★</p>
+                        </div>
+                    </div>
+                    </a>    
+                </div>
+
+                <div class="anime-card" data-id="diamond">
+                    <a href="anime.html?id=diamond">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/diamond no ace.jpg" alt="">
+                            <p>Diamond no Ace</p>
+                        </div>
+                        <div class="card-back">
+                            <p>Género:Shonen, spokon, colegial</p>
+                            <p>Rating: ★★★★★</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                
+                <div class="anime-card" data-id="jujutsu">
+                    <a href="anime.html?id=jujutsu">
+                    <div class="card-inner">
+                        <div class="card-front">
+                                <img src="assets/jujutsu.jpg" alt="Jujutsu Kaisen">
+                                <p>Jujutsu kaisen</p>
+                        </div>
+                        <div class="card-back">
+                            <p>Género:Shonen, sobrenatural, acción, peleas</p>
+                            <p>Rating: ★★★★★</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                       
+            </div>
+
+            
+
+            
+            <button class="scroll-btn right scroll-right">&#9654;</button>
+        </div>
+        
+    </section>
+
+    <section class="noticias-container">
+        <h2>ÚLTIMAS NOTICIAS DEL MUNDO DEL ANIME/MANGA</h2>
+        <div class="all-container">
+            <div class="contenedor-extra">
+                <div class="noticia-1">
+                    <img src="assets/fireforce.jpg" alt="Fire Force second cour" data-id="fire force">
+                    <h3 class="titulo-noticia">El segundo cour de fire force</h3>
+                    <p>Al haberse acabado el primer cour de la tercera temporada de fire force, nos encontramos con que todavá falta más, y estará por verse el próximo año</p>
+                </div>
+                <div class="noticia-2">
+                    <img src="assets/solo leveling 2.jpg" alt="Solo leveling season 3" data-id="solo leveling">
+                    <h3 class="titulo-noticia">Solo leveling y su próxima temporada</h3>
+                    <p>Nos encontramos a 6 meses desde que se estrenó la segunda temporada de solo leveling, y aún no conocemos nuevos detalles de la próxima temporada</p>
+                </div>
+            </div>
+
+            <div class="segundo-contenedor">
+                <h2>Más recientes</h2>
+                <div class="noticias-columna" data-id = "dandadan">
+                    <img src="assets/dandadan.jpg" alt="Dandadan" ">
+                    <div class="text">
+                        <h3 class="titulo-noticia">Dandadan segunda temporada</h3>
+                        <p>Dandadan y su segunda temporada se estrena esta temporada de verano 2025, con 3 capitulos</p>
+
+                    </div>
+                </div>
+
+                <div class="noticias-columna" data-id="kimetsu">
+                    <img src="assets/kimetsu.jpg" alt="Kimetsu" >
+                    <div class="text">
+                        <h3 class="titulo-noticia">Pelicula de Kimetsu no Yaiba</h3>
+                        <p>La pelicula de kimetsu se estrenará este 2025</p>
+                    </div>
+                </div>
+
+                <div class="noticias-columna" data-id="grand blue">
+                    <img src="assets/grand blue.jpg" alt="Grand Blue">
+                    <div class="text">
+                        <h3 class="titulo-noticia">GrandBlue y su segunda temporada</h3>
+                        <p>Después de más de 7 años, grandblue está de regreso con su segunda temporada</p>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+            
+       
+
+    </section>
+ 
+    <footer>
+        <ul>
+            <li>Made By Owen Sanchez</li>
+        </ul>
+    </footer>
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

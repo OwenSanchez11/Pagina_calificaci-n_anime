@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre del anime</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header class="main-header">
+    
+            
+                <div class="search-container">
+                    <div class="right-icons">
+                    <button class="icon-btn" id="search-btn">
+                        <img src="assets/search.svg" alt="Buscar"/>
+                    </button>
+                    <input type="text" id="search-input" placeholder="Buscar animes, mangas, películas...">
+                </div>
+                
+                <div class="logo-container">
+                    <button class="icon-btn" id="user">
+                        <img src="assets/user.svg" alt="User">
+                    </button>
+                </div>  
+
+                <div class="home-page">
+                    <button class="icon-btn" id="home">
+                        <img src="assets/home.svg" alt="Inicio">
+                    </button>
+
+                    </button>
+                </div>
+            </div>
+        
+    </nav>
+
+    </header>
+
+    <section class="anime-details-container">
+        <div class="anime-details">
+            <h2 id="titulo-anime">nombre del anime</h2>
+            <img src="assets/chainsaw.jpg" alt="nombre del anime" id="imagen-anime">
+            <br><br>
+            <h3 class="title-calificacion">Calificación</h3>
+
+            <div class="rating-stars" role="radiogroup" aria-label="Calificación por estrellas">
+                <span class="star" data-value="1" role="radio" aria-checked="false">&#9733;</span>
+                <span class="star" data-value="2" role="radio" aria-checked="false">&#9733;</span>
+                <span class="star" data-value="3" role="radio" aria-checked="false">&#9733;</span>
+                <span class="star" data-value="4" role="radio" aria-checked="false">&#9733;</span>
+                <span class="star" data-value="5" role="radio" aria-checked="false">&#9733;</span>
+            </div>
+            <br>
+
+            
+        </div>
+
+        <br>
+        <br>
+            
+        <div class="anime-info" id="anime-info">
+            <h3>Información del Anime</h3>
+            <br>
+            <ul>
+                <li><strong id="genero">Género:</strong> Acción, Aventura</li>
+                <li><strong id="año-lanzamiento">Año de lanzamiento:</strong> 2021</li>
+                <li><strong id="episodios">Número de episodios:</strong> 12</li>
+                <li><strong id="estudio">Estudio:</strong></li>
+            </ul>
+            <br>
+            <h3>Sinopsis</h3>
+            <br>
+        <p id="sinopsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic soluta magnam iure vero inventore deleniti fugiat quam, blanditiis vel consequatur illo unde quibusdam dolorem nam aperiam accusamus dolorum eveniet itaque?</p>
+        <div class="calificacion">
+
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li>Made By Owen Sanchez</li>
+        </ul>
+    </footer>
+
+    <script src="script-web-plantilla_anime.js"></script>
+    <script src="script-cambio_pagina.js"></script>
+
+
+</body>
+</html>
