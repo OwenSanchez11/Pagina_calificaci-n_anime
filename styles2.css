@@ -13,6 +13,12 @@ html  {
     margin: 0;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .main-header {
     background-color: #000000;
     color: white;
@@ -90,7 +96,7 @@ html  {
 }
 
 .anime-details img {
-    width: 70%;
+    width: 40%;
     display: block;
     margin: 0 auto;
     height: 80%;
@@ -136,28 +142,21 @@ html  {
 
 
 
-
 footer {
     background-color: #111111;
     color: white;
     text-align: center;
-    padding: 1rem;
     position: relative;
-    bottom: 0;
     width: 100%;
+    padding: 1rem 0;
+    margin-top: auto;;
 }
 
 footer ul {
     list-style: none;
 }
 
-#sinopsis {
-    margin-bottom: 1rem;
-    justify-content: center;
-    text-align: justify;
-    padding-left: 10px;
-    padding-right: 10px;
-}
+
 
 @media (max-width: 600px) {
     .main-header {
@@ -224,9 +223,22 @@ footer ul {
         color: white;
     }
 
-    .anime-details img {
-        width: 90%;
+    /* Común a todos los tamaños */
+    .imagen-contenedor {
+        width: 250px;
+        height: 350px;
+        overflow: hidden;
+        margin: 0 auto; /* centra la imagen */
     }
+
+    .imagen-contenedor img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;  /* recorta lo que sobra, mantiene proporción */
+        border-radius: 10px;
+        display: block;
+    }
+
 
     .anime-info {
     text-align: center;
@@ -254,6 +266,7 @@ footer ul {
         border-radius: 50%;
         user-select: none;
     }
+    
 }
 
 
@@ -283,11 +296,23 @@ footer ul {
         text-align: center;
 
     }
-    .anime-details img {
-        width: 40%;
-        padding: 0;
-
+   
+    /* Común a todos los tamaños */
+    .imagen-contenedor {
+        width: 250px;
+        height: 350px;
+        overflow: hidden;
+        margin: 0 auto; /* centra la imagen */
     }
+
+    .imagen-contenedor img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;  /* recorta lo que sobra, mantiene proporción */
+        border-radius: 10px;
+        display: block;
+    }
+
     .anime-details img:hover {
         transform: scale(1.05);
         transition: transform 0.3 ease;

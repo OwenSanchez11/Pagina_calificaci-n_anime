@@ -32,7 +32,7 @@ setInterval(showNextSlide, 5000);
 
 
 document.querySelectorAll(".carousel-wrapper").forEach(wrapper => {
-    const carousel = wrapper.querySelector(".carrousel-track");
+    const carousel = wrapper.querySelector(".carrousel-track, .carrousel-track2, .carrousel-track3, .carrousel-track4");
     const scrollLeftBtn = wrapper.querySelector(".scroll-left");
     const scrollRightBtn = wrapper.querySelector(".scroll-right");
 
@@ -140,57 +140,32 @@ document.querySelectorAll('.anime-card').forEach(card => {
 });
 
 // Creación de nuevas tarjetas de anime
-const animeContainer = document.querySelector("#anime-container .carrousel-track");
+// const animeContainer = document.querySelector("#anime-container .carrousel-track");
 
-animes.forEach(anime => {
-  const link = document.createElement('a');
-  link.href = `anime.html?id=${anime.id}`;
+// animes.forEach(anime => {
+//   const link = document.createElement('a');
+//   link.href = `anime.html?id=${anime.id}`;
 
-  const card = document.createElement('div');
-  card.classList.add('anime-card');
-  card.setAttribute('data-id', anime.id);
+//   const card = document.createElement('div');
+//   card.classList.add('anime-card');
+//   card.setAttribute('data-id', anime.id);
 
-  card.innerHTML = `
-    <div class="card-inner">
-      <div class="card-front">
-        <img src="${anime.imagen}" alt="${anime.titulo}">
-        <p>${anime.titulo}</p>
-      </div>
-      <div class="card-back">
-        <p>Género: ${anime.genero}</p>
-        <p>Rating: ${anime.rating}</p>
-      </div>
-    </div>
-  `;
+//   card.innerHTML = `
+//     <div class="card-inner">
+//       <div class="card-front">
+//         <img src="${anime.imagen}" alt="${anime.titulo}">
+//         <p>${anime.titulo}</p>
+//       </div>
+//       <div class="card-back">
+//         <p>Género: ${anime.genero}</p>
+//         <p>Rating: ${anime.rating}</p>
+//       </div>
+//     </div>
+//   `;
 
-  link.appendChild(card);
-  animeContainer.appendChild(link);
-});
+//   link.appendChild(card);
+//   animeContainer.appendChild(link);
+// });
 
 
 
-const animeContainer2 = document.querySelector("#anime-container2 .carrousel-track");
-
-animes2.forEach(anime => {
-  const link = document.createElement('a');
-  link.href = `anime.html?id=${anime.id}`;
-
-  const card = document.createElement('div');
-  card.classList.add('anime-card');
-  card.setAttribute('data-id', anime.id);
-
-  card.innerHTML = `
-    <div class="card-inner">
-      <div class="card-front">
-        <img src="${anime.imagen}" alt="${anime.titulo}">   
-        <p>${anime.titulo}</p>
-      </div>
-        <div class="card-back">
-            <p>Género: ${anime.genero}</p>
-            <p>Rating: ${anime.rating}</p>
-        </div>
-    </div>
-    `;
-    link.appendChild(card);
-    animeContainer2.appendChild(link);
-});

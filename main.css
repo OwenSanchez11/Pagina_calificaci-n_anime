@@ -138,7 +138,7 @@ body {
     font-size: 1.5rem;
 }
 
-.carrousel-track{
+.carrousel-track, .carrousel-track2, .carrousel-track3, .carrousel-track4{
     margin: 5px;
     display: flex;
     gap: 2rem;
@@ -150,6 +150,8 @@ body {
 
 }
 
+
+
 .anime-card {
   flex: 0 0 auto;
   width: min(140px, 85vw);
@@ -157,6 +159,15 @@ body {
   scroll-snap-align: start;
   position: relative;
   perspective: 1000px;
+}
+
+.anime-card2, .anime-card3, .anime-card4 {
+    flex: 0 0 auto;
+    width: min(140px, 85vw);
+    height: 230px;
+    scroll-snap-align: start;
+    position: relative;
+    perspective: 1000px;
 }
 
 .card-inner {
@@ -168,10 +179,14 @@ body {
 }
 
 .anime-card:hover .card-inner {
-    transform: rotateY(180deg);
+    transform: scale(1.05);
 }
 
-.card-front, .card-back{
+.anime-card2:hover .card-inner, .anime-card3:hover .card-inner, .anime-card4:hover .card-inner {
+    transform:scale(1.05);
+}
+
+.card-front{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -189,17 +204,15 @@ body {
     box-shadow: none;
 }
 
-.card-back {
-    transform: rotateY(180deg);
-}
 
 
-.anime-card img {
+.anime-card img, .anime-card3 img, .anime-card2 img, .anime-card4 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
+
 
 .card-front p {
     position: absolute;
@@ -215,35 +228,14 @@ body {
     z-index: 2;
 }
 
-.card-back {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0.5rem;
-    background: rgba(0, 0, 0, 0.6); /* fondo translúcido */
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: white;
-    z-index: 2;  
-}
 
-.carrousel-track::after {
+
+.carrousel-track::after,.carrousel-track2::after, .carrousel-track3::after, .carrousel-track4::after  {
     content: "";
     flex: 0 0 auto;
     width: 2rem;
 }
 
-.card-back button {
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    color: white;
-}
-
-.card-back button:hover {
-    background-color: blue;
-}
 
 .scroll-btn {
     display: none;
@@ -430,22 +422,25 @@ footer ul {
     }
 
 
-    .carrousel-track {
+    .carrousel-track, .carrousel-track2, .carrousel-track3, .carrousel-track4 {
         overflow-x: auto;
         scroll-behavior: smooth;
         scrollbar-width: none;
         -ms-overflow-style: none;
     }
 
-    .carrousel-track::-webkit-scrollbar {
+    .carrousel-track::-webkit-scrollbar, .carrousel-track2::-webkit-scrollbar, 
+    .carrousel-track3::-webkit-scrollbar, 
+    .carrousel-track4::-webkit-scrollbar {
         display: none;
     }
 
-    .anime-card {
+
+
+    .anime-card, .anime-card2, .anime-card3, .anime-card4 {
         width: 200px;
         height: 300px;
     }
-
     
 
     .scroll-btn {
