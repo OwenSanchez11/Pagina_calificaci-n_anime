@@ -308,6 +308,7 @@ body {
     color: white;
     font-size: 1.2rem;
     text-align: center;
+    padding-right: 1rem;
     
 }
 
@@ -323,6 +324,8 @@ body {
     padding-inline: 0.9rem; 
     padding-bottom: 0.5rem;
     box-sizing: border-box;
+    padding-right: 3rem;
+    text-align: justify;
 
 }
 
@@ -366,6 +369,7 @@ body {
     padding: 0.5rem;
     color: white;
     width: 50%;
+    text-align: justify;
 }
 
 .noticias-columna:hover {
