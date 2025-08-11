@@ -36,7 +36,7 @@ async function topRecomendados() {
 }
 
 
-topRecomendados();
+
 
 //funcion para sección animes recomendados
 
@@ -74,7 +74,7 @@ async function recomendaciones() {
   }
 }
 
-recomendaciones();
+
 
 
 async function topAnimes() {
@@ -109,7 +109,7 @@ async function topAnimes() {
   }
 }
 
-topAnimes();
+
 
 async function topManga() {
   try {
@@ -139,4 +139,100 @@ async function topManga() {
   }
 }
 
-topManga();
+
+
+async function noticiasAnime() {
+  try {
+    const response = await fetch('https://api.jikan.moe/v4/anime/1/news');
+    const data = await response.json();
+    const noticia = data.data.slice(0,2)
+    console.log(noticia);
+
+    const contenedor = document.querySelector('.contenedor-extra');
+    contenedor.innerHTML = '';
+
+    noticia.forEach(noticia => {
+      const noticia2 = document.createElement('div');
+      noticia2.classList.add('noticia');
+
+      noticia2.innerHTML = `
+        <a href="${noticia.forum_url}">
+        <div class="noticia">
+            <img src="${noticia.images.jpg.image_url}" alt="${noticia.title}">
+            <h3 class="titulo-noticia">${noticia.title}</h3>
+            <p>${noticia.excerpt}</p>
+        </div>
+      `
+      contenedor.appendChild(noticia2)
+    })
+  }
+  catch (error) {
+    console.error("Error en la carga de datos de la API: ", erorr);
+  }
+}
+
+
+async function noticiasAnime2() {
+    try {
+      const response = await fetch('https://api.jikan.moe/v4/anime/1/news');
+      const data = await response.json();
+      const noticia = data.data.slice(3,6)
+
+      const contenedor = document.querySelector('.segundo-contenedor');
+      contenedor.innerHTML = '' ;
+
+      noticia.forEach(noticia=> {
+        const noticias = document.createElement('div');
+        noticias.classList.add('noticias-columna');
+        
+        noticias.innerHTML = `
+         <a href="${noticia.forum_url}">
+          <div class="noticias-columna">
+              <img src="${noticia.images.jpg.image_url}" alt="${noticia.title}">
+                  <div class="text">
+                      <h3 class="titulo-noticia">${noticia.title}</h3>
+                      <p>${noticia.excerpt}</p>
+                  </div>
+            </div>
+        `
+
+        contenedor.appendChild(noticias)
+      })
+    }
+    catch(error) {
+      console.error("Error al cargar la API: ", error)
+    }
+}
+
+
+function delay(ms){
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function cargarTodo() {
+  try{
+    await topRecomendados();
+    await delay(1000);
+
+    await recomendaciones();
+    await delay(1000);
+
+    await topAnimes();
+    await delay(1000);
+
+    await topManga();
+    await delay(1000);
+
+    await noticiasAnime();
+    await delay(1000);
+
+    await noticiasAnime2();
+    await delay(1000)
+  }
+  catch (error) {
+    console.error("error en la carga de datos de la API", error);
+  }
+  
+}
+
+cargarTodo();

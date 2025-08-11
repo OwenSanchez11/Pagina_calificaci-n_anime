@@ -139,33 +139,14 @@ document.querySelectorAll('.anime-card').forEach(card => {
     })
 });
 
-// Creación de nuevas tarjetas de anime
-// const animeContainer = document.querySelector("#anime-container .carrousel-track");
-
-// animes.forEach(anime => {
-//   const link = document.createElement('a');
-//   link.href = `anime.html?id=${anime.id}`;
-
-//   const card = document.createElement('div');
-//   card.classList.add('anime-card');
-//   card.setAttribute('data-id', anime.id);
-
-//   card.innerHTML = `
-//     <div class="card-inner">
-//       <div class="card-front">
-//         <img src="${anime.imagen}" alt="${anime.titulo}">
-//         <p>${anime.titulo}</p>
-//       </div>
-//       <div class="card-back">
-//         <p>Género: ${anime.genero}</p>
-//         <p>Rating: ${anime.rating}</p>
-//       </div>
-//     </div>
-//   `;
-
-//   link.appendChild(card);
-//   animeContainer.appendChild(link);
-// });
 
 
-
+window.onload = function() {
+    setTimeout(() => {
+        const loader = document.querySelector('.loader');
+        if (loader) {
+            loader.classList.add('oculto'); // Aplica el fade
+            setTimeout(() => loader.remove(), 500); // Lo elimina después
+        }
+    }, 4000);
+}
