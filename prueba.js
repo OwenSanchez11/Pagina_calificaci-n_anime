@@ -75,8 +75,6 @@ async function recomendaciones() {
 }
 
 
-
-
 async function topAnimes() {
   try {
     const response = await fetch('https://api.jikan.moe/v4/top/anime');
@@ -236,3 +234,4 @@ async function cargarTodo() {
 }
 
 cargarTodo();
+

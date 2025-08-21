@@ -83,62 +83,6 @@ document.addEventListener("keydown", (e) => {
     }
 })
 
-document.querySelectorAll('.noticia-1, .noticia-2').forEach(noticia => {
-  noticia.addEventListener('click', function () {
-    if (this.classList.contains('noticia-1')) {
-      window.location.href = "fireforce.html";
-    } else if (this.classList.contains('noticia-2')) {
-      window.location.href = "sololeveling.html";
-    }
-  });
-});
-
-document.querySelectorAll('.noticias-columna').forEach(noticias => {
-    noticias.addEventListener('click', function () {
-        const id = this.dataset.id;
-
-        if (id === 'dandadan') {
-            window.location.href = "dandadan.html";
-        } else if (id === 'kimetsu') {
-            window.location.href = "kimetsu.html";
-        } else if (id === 'grand blue') {
-            window.location.href = "grandblue.html";
-        }
-    });
-});
-
-document.querySelectorAll('.anime-card').forEach(card => {
-    card.addEventListener('click', function () {
-        const id = this.dataset.id;
-
-        if (id === 'monster') {
-            window.location.href = "monster.html";
-        } else if (id === 'solo leveling') {
-            window.location.href = "sololeveling.html";
-        }else if (id === 'slime') {
-            window.location.href = "slime.html";
-        }else if (id === 'chainsaw') {
-            window.location.href = "chainsaw.html";
-        }else if (id ==='diamond no ace') {
-            window.location.href = "diamondnoace.html";
-        }else if (id === 'jujutsu') {
-            window.location.href = "jujutsu.html";
-        }else if (id ==='one piece') {
-            window.location.href ="onepiece.html";
-        }else if (id === 'gachiakuta') {
-            window.location.href = "gachiakuta.html";
-        }else if (id === 'overlord') {
-            window.location.href = "overlord.html";
-        }else if (id === 'kimetsu no yaiba') {
-            window.location.href = "kimetsu.html";
-        }else if (id === 'haikyuu') {
-            window.location.href = "haikyuu.html";
-        }else if(id ==='shingeki') {
-            window.location.href = "shingeki.html";
-        }
-    })
-});
-
 
 
 window.onload = function() {

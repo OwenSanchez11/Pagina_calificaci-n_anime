@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-animes.css">
+    
+    <title>ANIMES</title>
+</head>
+<body>
+    <header class="main-header">
+    <nav></nav>
+                <div class="search-container">
+                    <div class="right-icons">
+                    <button class="icon-btn" id="search-btn">
+                        <img src="assets/search.svg" alt="Buscar"/>
+                    </button>
+                    <input type="text" id="search-input" placeholder="Buscar animes, mangas, películas...">
+                </div>
+                
+                <div class="logo-container">
+                    <button class="icon-btn" id="user">
+                        <img src="assets/user.svg" alt="User">
+                    </button>
+                </div>  
+
+                <div class="home-page">
+                    <button class="icon-btn" id="home">
+                        <img src="assets/home.svg" alt="Inicio">
+                    </button>
+
+                    </button>
+                </div>
+            </div>
+        
+    </nav>
+
+    </header>
+
+        <div class="contenedor-padre" id="anime-container">
+
+                <div class="fila-cartas">
+                        <div class="anime-card">
+                            <a href='anime.html?id=${mal_id}'>
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="" alt="">
+                                    <p></p>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="anime-card">
+                            <a href="anime.html?id=${anime.mal_id}">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="" alt="">
+                                <p></p>
+                            </div>
+                        </div>
+                            </a>
+                    </div>
+
+                    <div class="anime-card">
+                        <a href="anime.html?id=${anime.mal_id}">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="" alt="">
+                                <p></p>
+                            </div>
+                        </div>
+                            </a>
+                    </div>
+
+                    <div class="anime-card">
+                        <a href="anime.html?id=${anime.mal_id}">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="" alt="">
+                                <p></p>
+                            </div>
+                        </div>
+                            </a>
+                    </div>
+
+                    <div class="anime-card">
+                        <a href="anime.html?id=${anime.mal_id}">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="" alt="">
+                                <p></p>
+                            </div>
+                        </div>
+                            </a>
+                    </div>
+                </div>
+        </div>
+
+    <div class="pagination">
+        <button id="prevBtn">Anterior</button>
+        <button id="nextBtn">Siguiente</button>
+     </div>
+    <script src="script-web-plantilla_anime.js"></script>
+
+    <script src="script_paginaAnime_paginaManga.js"></script>
+
+
+</body>
+</html>
