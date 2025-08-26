@@ -1,3 +1,5 @@
+/* Estilos de la pagina resultados*/
+
 html, body {
     background-color: #1a1a1a;
     margin: 0;
@@ -68,7 +70,7 @@ html, body {
 }
 
 
-.contenedor-padre, .contenedor-padre2 {
+.contenedor-padre{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Mínimo 250px, expandir a 1fr */
     grid-template-rows: repeat(auto-fill, minmax(100px, auto)); /* Mínimo 100px, ajustar al contenido */
@@ -78,7 +80,7 @@ html, body {
     padding-bottom: 1rem;
     padding-top: 1rem;
     margin: 0 auto;
-    width: 70%;
+    width: 100%;
     
 }
 
@@ -89,18 +91,10 @@ html, body {
 }
 
 
-.anime-card {
-  flex: 0 0 auto;
-  width: 100%;
-  height: 230px;
-  scroll-snap-align: start;
-  position: relative;
-  perspective: 1000px;
-}
 
 .anime-card{
     flex: 0 0 auto;
-    width: 75%;
+    width: 85%;
     height: 330px;
     scroll-snap-align: start;
     position: relative;
@@ -174,18 +168,38 @@ html, body {
 }
 
 #prevBtn, #nextBtn {
-    background-color: #1a1a1a;
-    color: white;
+    background-color: #ffbb00;
+    color: rgb(0, 0, 0);
     font-family: 'Courier New', Courier, monospace;
     border-radius: 5px;
 }
 
 #prevBtn:hover, #nextBtn:hover {
-    background-color: #636363;
+    background-color: #b38219;
+}
+
+.anime-card img.fav-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.2s ease;
+    object-fit: contain; /* 👈 evita deformar el corazón */
+}
+
+
+.fav-icon:hover {
+  transform: scale(1.2);
 }
 
 
 @media (max-width: 600px) {
+
+
+
     .main-header {
     background-color: #000000;
     color: white;
@@ -251,3 +265,91 @@ html, body {
     }
 }
 
+@media(max-width: 499px) {
+        .contenedor-padre{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Mínimo 250px, expandir a 1fr */
+        gap: 1rem;
+        justify-items: center;
+        align-items: center;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        margin: 0 auto;
+        width: 100%;
+        
+    }
+
+
+    .anime-card {
+        width: 80%;
+        height: 230px;
+        position: relative;
+        perspective: 1000px;
+    }
+
+    .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+
+    }
+
+    .anime-card:hover .card-inner {
+        transform: scale(1.05);
+    }
+
+    .anime-card:hover .card-inner{
+        transform:scale(1.05);
+    }
+
+
+    .card-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius:5px ;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 0;
+    box-shadow: none;
+    }
+
+
+
+    .anime-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+
+    .card-front p {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0.5rem;
+        background: rgba(0, 0, 0, 0.6); /* fondo translúcido */
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: white;
+        z-index: 2;
+    }
+
+    .pagination{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
