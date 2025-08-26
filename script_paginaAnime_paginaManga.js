@@ -36,12 +36,15 @@ prevButton.addEventListener('click', () => {
   if (currentPage > 1) {
     currentPage--;
     cambioPagina();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+
   }
 });
 
 nextButton.addEventListener('click', () => {
   currentPage++;
   cambioPagina();
+  window.scrollTo({top: 0, behavior: 'smooth'});
 });
 
 // ========================
