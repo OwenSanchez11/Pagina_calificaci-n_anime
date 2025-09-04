@@ -1,6 +1,9 @@
 //Script para la pagina principal index en donde llama las API y muestra los datos en el HTML
 
 
+
+
+
 //función para obtener los animes recomendados de la primera sección
 async function topRecomendados() {
   try {

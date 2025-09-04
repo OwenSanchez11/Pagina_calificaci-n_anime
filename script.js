@@ -3,10 +3,17 @@ const navLinks = document.getElementById("nav-links");
 const user = document.getElementById("user")
 const searchBtn = document.getElementById("search-btn");
 const searchInput = document.getElementById("search-input");
+const favoriteBtn = document.getElementById("save-btn")
 
 
 
 const scrollAmount = 200;
+
+function redirectFavorites(){
+    window.location.href ="favoritos.html"
+}
+
+favoriteBtn.addEventListener("click", redirectFavorites);
 
 
 menuToggle.addEventListener("click", () =>{
@@ -57,6 +64,7 @@ document.querySelectorAll(".carousel-wrapper").forEach(wrapper => {
 function redirect() {
     window.location.href="login.html"
 }
+
 
 user.addEventListener("click", redirect);
 

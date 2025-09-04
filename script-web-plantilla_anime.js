@@ -2,6 +2,7 @@ const user = document.getElementById("user")
 const searchBtn = document.getElementById("search-btn");
 const searchInput = document.getElementById("search-input");
 const homeBtn = document.querySelector("#home");
+const favoriteBtn = document.getElementById("save-btn")
 
 
 function redirectHome() {
@@ -94,3 +95,9 @@ stars.forEach((star, index) => {
 
     })
 })
+
+function redirectFavorites() {
+    window.location.href = "favoritos.html";
+}
+
+favoriteBtn.addEventListener("click", redirectFavorites);
